@@ -1,0 +1,28 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - PlanterPi</title>
+        {% else %}
+        <title>PlanterPi</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            PlanterPi:
+            <a href="/planter_page">Planter</a>
+            <a href="/data_hours">Data</a>
+            <a href="/water_control">Water Control</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Planter: {{ name.name  }}</h1>
+    <h2>Avg Moisture 24 Hrs: {{ avg_moisture.moisture }}</h2>
+    <form action="" method="post" novalidate>
+        {{ hour_form.hidden_tag() }}
+        <p>
+            {{ hour_form.hours.label }}<br>
+            {{ hour_form.hours }}
+        </p>
+        <p>{{ hour_form.submit() }}</p>
+    </form>
+    <h2>Avg Moisture 10 Hrs: {{ avg_moisture_10.moisture }}</h2>
+    <h2>Avg Humidity: {{ avg_humidity.humidity }}</h2>
+    <!--<h2>Sensor Data: {{ get_sensor_data.sensor_data }}</h2>-->
+    
+{% endblock %}
