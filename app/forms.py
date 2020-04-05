@@ -16,16 +16,18 @@ class PlanterForm(FlaskForm):
 class Planter_name_list(FlaskForm):
 	planter_data = db.general_data()
 	planter_names = planter_data.get_planter_names()
-	
-	
-	planternamelist = SelectField(label= 'Planter', choices = planter_names)#[('1','Demeter'), ('2', 'Rongo')])
+	planternamelist = SelectField(label= 'Planter', choices = planter_names)
 	submit = SubmitField('Submit')
 
 class HoursForm(FlaskForm):
-	hours = IntegerField('Hours', validators=[DataRequired()])
+	hours = IntegerField('Time Frame', validators=[DataRequired()])
+	time_option = SelectField(label='Time Frame', choices = [('1', 'Hours'),('2', 'Days')])
 	submit = SubmitField('Submit')
 
 class WaterForm(FlaskForm):
 	rt_input = IntegerField('Run Time')
 	rs_input = IntegerField('Run Speed')
 	water_trig = SubmitField('Water Now')
+	
+class ChartForm(FlaskForm):
+	view_chart = SubmitField('View Chart')

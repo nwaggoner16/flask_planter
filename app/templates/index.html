@@ -7,12 +7,19 @@
         {{ hour_form.hidden_tag() }}
         <p>
             {{ hour_form.hours.label }}<br>
-            {{ hour_form.hours }}
+            {{ hour_form.hours }} {{ hour_form.time_option }}
         </p>
         <p>{{ hour_form.submit() }}</p>
     </form>
     <h2>Avg Moisture 10 Hrs: {{ avg_moisture_10.moisture }}</h2>
     <h2>Avg Humidity: {{ avg_humidity.humidity }}</h2>
-    <!--<h2>Sensor Data: {{ get_sensor_data.sensor_data }}</h2>-->
+    <h2>Moisture Chart: {{ moisture_chart }}</h2>
+    <form action="" method="post" novalidate>
+        {{ chart_form.hidden_tag() }}
+        
+        <p>{{ chart_form.view_chart() }}</p>
+    </form>
+    <!--<input type="submit" name="view_charts" method="post" value="View Charts">
+    <h2>Sensor Data: {{ get_sensor_data.sensor_data }}</h2>-->
     
 {% endblock %}
