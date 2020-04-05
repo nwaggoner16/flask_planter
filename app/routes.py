@@ -75,6 +75,7 @@ def data_hours(planter_id, hours=24):
 	avg_moisture_10 = {'moisture': planter_obj.avg_moisture(10)}
 	avg_humidity = {'humidity': planter_obj.avg_humidity()}
 	get_sensor_data = {'sensor_data': planter_obj.get_planter_sensor_data()}
+	print(get_sensor_data)
 	hour_form = HoursForm()
 	if hour_form.validate():
 		hour_val = hour_form.hours.data
