@@ -124,7 +124,15 @@ def water_control():
 	water_form = WaterForm()
 	global planter_obj
 	name = {'name': planter_obj.planter_name}
-	return render_template('water_control.html', name=name)
+	
+	if water_form.validate():
+		global run_time
+		global run_speed
+		run_time = water_form.rt_input.data
+		run_speed = water_form.rs_input.data
+		print(run_time)
+		print(run_speed)
+	return render_template('water_control.html', name=name, water_form=water_form)
 	
 @app.route('/plot.png')
 def plot_png():

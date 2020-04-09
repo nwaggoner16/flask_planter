@@ -2,6 +2,16 @@
 
 {% block content %}
     <h1>Planter: {{ name.name  }}</h1>
-    
+    <form action="" method="post" novalidate>
+        {{ water_form.hidden_tag() }}
+        <p>
+            {{ water_form.rs_input }}
+            {{ water_form.rs_input.label }}
+        </p>
+        <p>
+            {{ water_form.rt_input }}
+            {{ water_form.rt_input.label }}
+        </p>
+        <p>{{ water_form.water_trig() }}</p>
     
 {% endblock %}
