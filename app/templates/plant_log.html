@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<head>
+   <!-- <style type="text/css">
+    body{
+        font-family:Arial, Helvetica;
+        color:#212121;
+        background-color:#fff;
+        max-width:1280px;
+        margin:0 auto;
+    }
+    #main{
+        width:90%;
+        float:left;
+    }
+    #main label{
+        font-weight:bold;
+    }-->
+    
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Planter: {{ name.name  }}</h1>
+        <h2>Plant log form</h2>
+        <form action="" method="post" novalidate>
+            {{ plant_log_form.hidden_tag() }}
+            <p>
+                {{ plant_log_form.browning.label }}<br>
+                {{ plant_log_form.browning }}
+            </p>
+            <p>
+                {{ plant_log_form.plant_tags.label }}<br>
+                {{ plant_log_form.plant_tags }}
+            </p>
+            <p>
+                {{ plant_log_form.plant_notes.label }}<br>
+                {{ plant_log_form.plant_notes }}
+            </p>
+            <p>{{ plant_log_form.submit_plant_log() }}</p>
+        </form>
+    </div>
+</body>
+</html>
+
+    
+{% endblock %}

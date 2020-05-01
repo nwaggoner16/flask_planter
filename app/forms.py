@@ -31,3 +31,9 @@ class WaterForm(FlaskForm):
 	
 class ChartForm(FlaskForm):
 	view_chart = SubmitField('View Chart')
+	
+class PlantLogForm(FlaskForm):
+	browning = SelectField(label='Is the plant browning', choices = [('1', 'Yes'),('2', 'No')])
+	plant_tags = StringField('Plant Tags')
+	plant_notes = StringField('Plant Notes')
+	submit_plant_log = SubmitField('Submit Log')

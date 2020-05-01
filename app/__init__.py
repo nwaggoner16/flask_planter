@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_bootstrap import Bootstrap
 from config import Config
 import sys
 sys.path.append('/home/pi/PlanterPi/')
@@ -7,7 +8,10 @@ from db import planter_by_id
 app = Flask(__name__)
 app.config.from_object(Config)
 
+bootstrap = Bootstrap(app)
+
 from app import routes
+
 
 global planter_obj
 global user

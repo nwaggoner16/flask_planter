@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <head>
+        {% if title %}
+        <title>{{ title }} - PlanterPi</title>
+        {% else %}
+        <title>PlanterPi</title>
+        {% endif %}
+    </head>
+    <body>
+        <header>
+          <div>
+            PlanterPi:
+            <a href="/planter_list_page">Planter</a>
+            <a href="/data_hours">Data</a>
+            <a href="/water_control">Water Control</a>
+            <a href="/plant_log">Log</a>
+          </div>
+        <hr>
+        </header>
+        
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,28 +1,34 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - PlanterPi</title>
-        {% else %}
-        <title>PlanterPi</title>
-        {% endif %}
-    </head>
-    <body>
-        <div>
-            PlanterPi:
-            <a href="/planter_page">Planter</a>
-            <a href="/data_hours">Data</a>
-            <a href="/water_control">Water Control</a>
-        </div>
-        <hr>
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }} - Microblog{% else %}Welcome to Microblog{% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default">
+        
+            <div>
+              PlanterPi:
+              <a href="/planter_list_page">Planter</a>
+              <a href="/data_hours">Data</a>
+              <a href="/water_control">Water Control</a>
+              <a href="/plant_log">Log</a>
+            </div>
+        
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-        <ul>
             {% for message in messages %}
-            <li>{{ message }}</li>
+            <div class="alert alert-info" role="alert">{{ message }}</div>
             {% endfor %}
-        </ul>
         {% endif %}
         {% endwith %}
-        {% block content %}{% endblock %}
-    </body>
-</html>
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}
