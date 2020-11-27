@@ -1,0 +1,9 @@
+ToDo:
+
+1.Build UI
+	1.Dashboard Page
+	2.Water Control Page
+
+2.Test watering logic more/move tasks to Celery
+
+3.Put case together

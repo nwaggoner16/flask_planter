@@ -1,0 +1,46 @@
+2020-03-26 19:08:02.133613
+    ran pump 1
+    Demeter Moisture: 17.041666666666668
+2020-03-26 19:08:15.396858
+    ran pump 1
+    Demeter Moisture: 17.041666666666668
+2020-03-26 19:10:42.163577
+    ran pump 1
+    Demeter Moisture: 17.041666666666668
+    ran pump 2
+    Rongo Moisture: 41.958333333333336
+2020-03-26 19:11:28.979046
+    ran pump 1
+    Demeter Moisture: 17.041666666666668
+    ran pump 2
+    Rongo Moisture: 41.958333333333336
+2020-03-26 19:11:33.944986
+    ran pump 1
+    Demeter Moisture: 17.041666666666668
+    ran pump 2
+    Rongo Moisture: 41.958333333333336
+2020-03-27 18:07:31.969034
+	Temperature: 73.4
+	Humidity: 47
+	Light: 0.43076923076923074
+	Soil Temp: 65472
+	Soil Moisture: 37.668943467519256
+2020-03-27 18:08:18.511035
+	Temperature: 73.4
+	Humidity: 47
+	Light: 0.43076923076923074
+	Soil Temp: 65472
+	Soil Moisture: 37.668943467519256
+Handling RunTimeError
+2020-03-27 18:08:30.965126
+	Temperature: 51.8
+	Humidity: 151
+	Light: 0.43076923076923074
+	Soil Temp: 65472
+	Soil Moisture: 37.668943467519256
+2020-03-27 18:09:34.708000
+	Temperature: 73.4
+	Humidity: 47
+	Light: 0.43076923076923074
+	Soil Temp: 65472
+	Soil Moisture: 37.43641912512716
